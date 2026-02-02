@@ -1,4 +1,6 @@
 import { ArrowDown, Mail, FileText, Linkedin } from "lucide-react";
+import profilePhoto from "@/assets/profile.jpg";
+
 export function HeroSection() {
   return <section id="about" className="min-h-screen flex items-center pt-16">
       <div className="section-container py-20">
@@ -7,9 +9,11 @@ export function HeroSection() {
           <div className="lg:col-span-2 flex justify-center lg:justify-start">
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-gradient-to-br from-neural-muted to-secondary overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                  <span className="text-sm">Your Photo</span>
-                </div>
+                <img 
+                  src={profilePhoto} 
+                  alt="Farzin Negahbani" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               {/* Decorative accent */}
               <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-xl neural-accent opacity-20 -z-10" />
@@ -18,7 +22,7 @@ export function HeroSection() {
 
           {/* Content */}
           <div className="lg:col-span-3 text-center lg:text-left">
-            <p className="text-primary font-medium mb-2 animate-fade-in">Neuroscience Researcher</p>
+            
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-6 animate-fade-in" style={{
             animationDelay: "0.1s"
           }}>Farzin Negahbani</h1>
@@ -40,7 +44,7 @@ export function HeroSection() {
                 <FileText size={18} />
                 Publications
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-3 border border-border rounded-lg text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors">
+              <a href="https://de.linkedin.com/in/farzin-negahbani-567357109" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-3 border border-border rounded-lg text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors">
                 <Linkedin size={18} />
               </a>
             </div>

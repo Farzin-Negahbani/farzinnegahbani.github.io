@@ -2,36 +2,30 @@ import { BookOpen, Download, Calendar, Users } from "lucide-react";
 
 const courses = [
   {
-    code: "NEUR 501",
-    title: "Introduction to Neuroscience",
-    term: "Fall 2024",
-    level: "Graduate",
-    description: "Fundamental concepts in neuroscience covering neural signaling, sensory systems, and motor control.",
-  },
-  {
     code: "NEUR 620",
-    title: "Advanced Neuromodulation",
-    term: "Spring 2024",
+    title: "Neuroprosthetics and Intelligent Implants",
+    term: "Summer 2026",
     level: "Graduate",
-    description: "Deep dive into neuromodulation techniques including DBS, TMS, and emerging therapies.",
+    description: "Advanced course covering neural interfaces, brain-machine interfaces, and intelligent implantable devices for therapeutic applications.",
   },
 ];
 
 const resources = [
   {
-    title: "DBS Parameters Guide",
-    type: "PDF",
-    description: "A comprehensive guide to DBS programming parameters.",
+    title: "Interactive Aperiodic Estimation GUI",
+    type: "Tool",
+    description: "Generate simulation data and estimate aperiodic components using FOOOF and Yasa.",
+    link: "https://github.com/Farzin-Negahbani/NeNa_aperiodic_GUI",
   },
   {
-    title: "Neural Anatomy Atlas",
-    type: "Slides",
-    description: "Visual guide to basal ganglia and related structures.",
+    title: "Python Starter Course",
+    type: "Course",
+    description: "Introduction to Python programming for neuroscience applications and data analysis.",
   },
   {
     title: "Electrophysiology Basics",
-    type: "Video Series",
-    description: "Introduction to recording and analyzing neural signals.",
+    type: "Tutorial",
+    description: "Fundamentals of neural signal recording, processing, and interpretation techniques.",
   },
 ];
 
@@ -86,22 +80,40 @@ export function TeachingSection() {
             Teaching Resources
           </h3>
           <div className="grid md:grid-cols-3 gap-4">
-            {resources.map((resource) => (
-              <div
-                key={resource.title}
-                className="p-5 bg-card rounded-lg border border-border hover:border-primary/50 transition-colors cursor-pointer group"
-              >
-                <span className="text-xs font-medium text-accent uppercase tracking-wide">
-                  {resource.type}
-                </span>
-                <h4 className="font-medium text-foreground mt-2 mb-1 group-hover:text-primary transition-colors">
-                  {resource.title}
-                </h4>
-                <p className="text-sm text-muted-foreground">
-                  {resource.description}
-                </p>
-              </div>
-            ))}
+            {resources.map((resource) => {
+              const content = (
+                <>
+                  <span className="text-xs font-medium text-accent uppercase tracking-wide">
+                    {resource.type}
+                  </span>
+                  <h4 className="font-medium text-foreground mt-2 mb-1 group-hover:text-primary transition-colors">
+                    {resource.title}
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    {resource.description}
+                  </p>
+                </>
+              );
+
+              return resource.link ? (
+                <a
+                  key={resource.title}
+                  href={resource.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-5 bg-card rounded-lg border border-border hover:border-primary/50 transition-colors cursor-pointer group"
+                >
+                  {content}
+                </a>
+              ) : (
+                <div
+                  key={resource.title}
+                  className="p-5 bg-card rounded-lg border border-border"
+                >
+                  {content}
+                </div>
+              );
+            })}
           </div>
           <p className="mt-6 text-sm text-muted-foreground text-center">
             Access to course materials is available for enrolled students via the university portal.

@@ -22,11 +22,12 @@ export function ContactSection() {
                   <span className="font-medium text-foreground">ORCID</span>
                   <ExternalLink size={16} className="text-muted-foreground group-hover:text-primary" />
                 </a>
-                <a href="https://researchgate.net" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-3 bg-card rounded-lg hover:shadow-md transition-shadow group">
-                  <span className="font-medium text-foreground">ResearchGate</span>
+                
+                <a href="https://github.com/Farzin-Negahbani" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-3 bg-card rounded-lg hover:shadow-md transition-shadow group">
+                  <span className="font-medium text-foreground">GitHub</span>
                   <ExternalLink size={16} className="text-muted-foreground group-hover:text-primary" />
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-3 bg-card rounded-lg hover:shadow-md transition-shadow group">
+                <a href="https://de.linkedin.com/in/farzin-negahbani-567357109" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-3 bg-card rounded-lg hover:shadow-md transition-shadow group">
                   <span className="font-medium text-foreground">LinkedIn</span>
                   <ExternalLink size={16} className="text-muted-foreground group-hover:text-primary" />
                 </a>

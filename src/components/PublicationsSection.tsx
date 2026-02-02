@@ -2,35 +2,19 @@ import { ExternalLink, FileText } from "lucide-react";
 
 const publications = [
   {
+    year: "2026",
+    title: "Propensity-matched multicenter comparison of Parkinson's disease outcomes with and without deep brain stimulation",
+    authors: "Gharabaghi A, Negahbani F, Keute M",
+    journal: "npj Parkinson's Disease",
+    doi: "",
+    type: "article",
+  },
+  {
     year: "2024",
-    title: "Example Publication Title: Deep Brain Stimulation in Parkinson's Disease",
-    authors: "Your Name, Co-Author A, Co-Author B",
-    journal: "Journal of Neuroscience",
-    doi: "10.1000/example",
-    type: "article",
-  },
-  {
-    year: "2023",
-    title: "Neural Circuit Dynamics During Movement Disorders",
-    authors: "Co-Author A, Your Name, Co-Author C",
-    journal: "Nature Neuroscience",
-    doi: "10.1000/example2",
-    type: "article",
-  },
-  {
-    year: "2023",
-    title: "A Review of Neuromodulation Techniques for Psychiatric Disorders",
-    authors: "Your Name, Co-Author D",
-    journal: "Annual Review of Neuroscience",
-    doi: "10.1000/example3",
-    type: "review",
-  },
-  {
-    year: "2022",
-    title: "Electrophysiological Signatures of Effective DBS Therapy",
-    authors: "Co-Author B, Co-Author C, Your Name",
-    journal: "Brain Stimulation",
-    doi: "10.1000/example4",
+    title: "Machine learning explains response variability of deep brain stimulation on Parkinson's disease quality of life",
+    authors: "Ferrea E, Negahbani F, Cebi I, Weiss D, Gharabaghi A",
+    journal: "NPJ Digital Medicine",
+    doi: "10.1038/s41746-024-01253-6",
     type: "article",
   },
 ];
